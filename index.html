@@ -1,147 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouna Elbahloul | Pentesting Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouna Elbahloul | Pentesting Portfolio</title>
 
-    <style>
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background: radial-gradient(circle at top, #0f172a, #020617);
-            color: #e5e7eb;
-        }
+<style>
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        background-color: #0b132b; /* Dark Blue Background */
+        color: #e0e0e0;
+    }
 
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background-color: #1c1f3b; /* Dark Card */
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    }
+
+    header {
+        text-align: center;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #3a0ca3;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        color: #3a0ca3; /* Violet */
+        margin: 0;
+    }
+
+    header p {
+        margin-top: 5px;
+        color: #80ffdb;
+        font-weight: bold;
+    }
+
+    section {
+        margin-top: 40px;
+    }
+
+    h2 {
+        border-left: 5px solid #3a0ca3;
+        padding-left: 10px;
+        font-size: 1.6em;
+        color: #3a0ca3;
+    }
+
+    p, li {
+        line-height: 1.6;
+    }
+
+    ul {
+        margin-left: 20px;
+    }
+
+    .project {
+        background-color: #141850;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 12px;
+        border-left: 5px solid #3a0ca3;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+
+    .project h3 {
+        margin-top: 0;
+        color: #80ffdb;
+    }
+
+    .methodology {
+        background-color: #141850;
+        padding: 20px;
+        margin-top: 20px;
+        border-left: 5px solid #3a0ca3;
+        border-radius: 12px;
+    }
+
+    /* BUTTON CV STYLE */
+    .btn-cv {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 15px 35px;
+        font-weight: bold;
+        font-size: 1em;
+        text-decoration: none;
+        color: #0b132b;
+        background: linear-gradient(135deg, #3a0ca3, #7209b7);
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(114,9,183,0.5);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-cv:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(114,9,183,0.7);
+    }
+
+    .contact a {
+        color: #80ffdb;
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: bold;
+    }
+
+    .contact a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 15px;
+        border-top: 1px solid #3a0ca3;
+        color: #94a3b8;
+        font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
         .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            background: #020617;
-            border-radius: 14px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-            padding: 50px;
-            border: 1px solid #1e293b;
-        }
-
-        header {
-            text-align: center;
-            padding-bottom: 40px;
-            border-bottom: 2px solid #1e293b;
+            padding: 25px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.8em;
-            color: #38bdf8;
+            font-size: 2em;
         }
-
-        header p {
-            margin-top: 10px;
-            font-size: 1.3em;
-            font-weight: 600;
-            color: #94a3b8;
-        }
-
-        section {
-            margin-top: 50px;
-        }
-
-        h2 {
-            color: #38bdf8;
-            border-left: 6px solid #38bdf8;
-            padding-left: 14px;
-            font-size: 1.6em;
-        }
-
-        p {
-            line-height: 1.7;
-            font-size: 1.05em;
-            color: #cbd5f5;
-        }
-
-        ul {
-            margin-left: 25px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .project {
-            background: #020617;
-            padding: 22px;
-            margin-top: 22px;
-            border-radius: 12px;
-            border: 1px solid #1e293b;
-            border-left: 6px solid #38bdf8;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-        }
-
-        .project h3 {
-            margin-top: 0;
-            color: #7dd3fc;
-        }
-
-        .methodology {
-            background: #020617;
-            padding: 22px;
-            border-radius: 12px;
-            border: 1px solid #1e293b;
-            border-left: 6px solid #7c3aed;
-            margin-top: 22px;
-        }
-
-        .contact a {
-            display: inline-block;
-            margin-right: 15px;
-            margin-top: 10px;
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        .btn-cv {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 14px 30px;
-            background: linear-gradient(135deg, #38bdf8, #7c3aed);
-            color: #020617;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(56,189,248,0.35);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .btn-cv:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 40px rgba(124,58,237,0.45);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 25px;
-            border-top: 1px solid #1e293b;
-            font-size: 0.9em;
-            color: #94a3b8;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px 20px;
-                margin: 20px;
-            }
-
-            header h1 {
-                font-size: 2.2em;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
@@ -157,36 +146,34 @@
     <h2>About Me</h2>
     <p>
         Cybersecurity specialist focused on penetration testing.
-        I conduct authorized security assessments to identify application
-        and infrastructure vulnerabilities and deliver clear remediation strategies.
+        Conduct authorized assessments to find vulnerabilities and provide remediation.
     </p>
 </section>
 
 <section>
     <h2>Skills</h2>
     <ul>
-        <li>Web & Network Penetration Testing</li>
+        <li>Web & Network Pentesting</li>
         <li>OWASP Top 10</li>
-        <li>Vulnerability Assessment</li>
-        <li>Reconnaissance → Exploitation → Reporting</li>
+        <li>Vulnerability Analysis</li>
+        <li>Recon → Exploitation → Reporting</li>
         <li>Linux & Windows Environments</li>
     </ul>
 </section>
 
 <section>
-    <h2>Pentesting Projects</h2>
-
+    <h2>Projects</h2>
     <div class="project">
         <h3>Casablanca Finance City (CFC)</h3>
-        <p><strong>Scope:</strong> Web & Network Penetration Testing</p>
+        <p><strong>Scope:</strong> Web & Network Pentesting</p>
         <p><strong>Tools:</strong> Nmap, Burp Suite, Metasploit, Nikto</p>
-        <p><strong>Outcome:</strong> Vulnerabilities identified with remediation guidance.</p>
+        <p><strong>Outcome:</strong> Vulnerabilities identified & documented.</p>
     </div>
 
     <div class="project">
         <h3>Régie 3</h3>
-        <p><strong>Scope:</strong> Web Application Security Testing</p>
-        <p><strong>Tools:</strong> Burp Suite, OWASP ZAP, SQLmap</p>
+        <p><strong>Scope:</strong> Web Application Testing</p>
+        <p><strong>Tools:</strong> Burp Suite, SQLmap, OWASP ZAP</p>
         <p><strong>Outcome:</strong> XSS and misconfigurations detected.</p>
     </div>
 
@@ -194,25 +181,23 @@
         <h3>ISGA</h3>
         <p><strong>Scope:</strong> Network Penetration Testing</p>
         <p><strong>Tools:</strong> Nmap, Metasploit, Hydra</p>
-        <p><strong>Outcome:</strong> Hardening recommendations delivered.</p>
+        <p><strong>Outcome:</strong> Hardening recommendations provided.</p>
     </div>
 
     <div class="project">
         <h3>RMO</h3>
-        <p><strong>Scope:</strong> Web & Application Penetration Testing</p>
+        <p><strong>Scope:</strong> Web & App Testing</p>
         <p><strong>Tools:</strong> Burp Suite, Nikto, SQLmap</p>
-        <p><strong>Outcome:</strong> OWASP Top 10 vulnerabilities identified.</p>
+        <p><strong>Outcome:</strong> OWASP Top 10 vulnerabilities found.</p>
     </div>
-
-    <p><em>All engagements were performed in authorized and controlled environments.</em></p>
 </section>
 
 <section>
     <h2>Methodology</h2>
     <div class="methodology">
-        <p><strong>Reconnaissance:</strong> Asset discovery and enumeration.</p>
-        <p><strong>Exploitation:</strong> Validation of identified vulnerabilities.</p>
-        <p><strong>Reporting:</strong> Risk-based reporting and remediation roadmap.</p>
+        <p><strong>Recon:</strong> Information gathering on targets.</p>
+        <p><strong>Exploitation:</strong> Test & validate vulnerabilities.</p>
+        <p><strong>Reporting:</strong> Risk documentation & remediation plan.</p>
     </div>
 </section>
 
