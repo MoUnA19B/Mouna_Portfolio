@@ -8,7 +8,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* BODY */
+/* ===== BODY ===== */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -19,13 +19,22 @@ body {
     padding: 20px;
     background: #0b132b;
     color: #e0e0e0;
+    overflow-x: hidden;
 }
 
-/* CONTAINER AVEC GLOW UNIQUEMENT */
+/* ===== MATRIX BACKGROUND ===== */
+#matrix-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: #0b132b;
+}
+
+/* ===== CONTAINER GLOW ===== */
 @keyframes glowPulse {
-    0% { box-shadow: 0 0 40px rgba(56, 223, 248, 0.5), 0 0 30px rgba(124, 58, 237, 0.3), 0 15px 40px rgba(0,0,0,0.6); }
-    50% { box-shadow: 0 0 70px rgba(56, 223, 248, 0.8), 0 0 50px rgba(124, 58, 237, 0.5), 0 15px 40px rgba(0,0,0,0.6); }
-    100% { box-shadow: 0 0 40px rgba(56, 223, 248, 0.5), 0 0 30px rgba(124, 58, 237, 0.3), 0 15px 40px rgba(0,0,0,0.6); }
+    0% { box-shadow: 0 0 40px rgba(56,223,248,0.5), 0 0 30px rgba(124,58,237,0.3); }
+    50% { box-shadow: 0 0 70px rgba(56,223,248,0.8), 0 0 50px rgba(124,58,237,0.5); }
+    100% { box-shadow: 0 0 40px rgba(56,223,248,0.5), 0 0 30px rgba(124,58,237,0.3); }
 }
 
 .container {
@@ -35,17 +44,16 @@ body {
     padding: 50px;
     border-radius: 25px;
     border: 1px solid #38bdf8;
-    position: relative;
     animation: glowPulse 3s ease-in-out infinite;
     box-sizing: border-box;
+    position: relative;
+    z-index: 1;
 }
 
-/* SUPPRIMER TOUT GLOW SUR LE TEXTE */
-* {
-    text-shadow: none !important;
-}
+/* ===== RESET TEXT GLOW ===== */
+* { text-shadow: none !important; }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
     text-align: center;
     padding-bottom: 30px;
@@ -59,15 +67,12 @@ header h1 {
 }
 
 header p {
-    margin-top: 5px;
     color: #80ffdb;
     font-weight: bold;
 }
 
-/* SECTIONS */
-section {
-    margin-top: 40px;
-}
+/* ===== SECTIONS ===== */
+section { margin-top: 40px; }
 
 h2 {
     border-left: 6px solid #38bdf8;
@@ -81,26 +86,21 @@ p, li {
     color: #cbd5f5;
 }
 
-ul {
-    margin-left: 20px;
-}
-
-/* PROJECTS */
+/* ===== PROJECTS ===== */
 .project {
-    background-color: rgba(30, 40, 80, 0.95);
+    background: rgba(30,40,80,0.95);
     padding: 25px;
     margin-top: 20px;
     border-radius: 15px;
     border-left: 6px solid #38bdf8;
-    box-shadow: none;
 }
 
 .project h3 {
-    margin-top: 0;
     color: #80ffdb;
+    margin-top: 0;
 }
 
-/* BUTTON CV WITH GLOW */
+/* ===== BUTTON GLOW ===== */
 @keyframes glowPulseBtn {
     0% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #7c3aed; }
     50% { box-shadow: 0 0 20px #38bdf8, 0 0 40px #7c3aed; }
@@ -113,62 +113,52 @@ ul {
     padding: 15px 40px;
     font-weight: bold;
     font-size: 1.1em;
+    color: #fff;
     text-decoration: none;
-    color: #ffffff;
     background: linear-gradient(135deg, #38bdf8, #7c3aed);
     border-radius: 15px;
-    transition: all 0.3s ease;
     text-transform: uppercase;
-    animation: glowPulseBtn 2s ease-in-out infinite;
+    animation: glowPulseBtn 2s infinite;
+    transition: 0.3s ease;
 }
 
 .btn-cv:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 0 30px #38bdf8, 0 0 60px #7c3aed;
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #38bdf8, 0 0 80px #7c3aed;
 }
 
-/* CONTACT LINKS */
+/* ===== CONTACT ===== */
 .contact a {
     color: #80ffdb;
-    text-decoration: none;
-    margin-right: 20px;
     font-weight: bold;
+    margin-right: 15px;
+    text-decoration: none;
 }
 
-.contact a:hover {
-    text-decoration: underline;
-}
+.contact a:hover { text-decoration: underline; }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
-    text-align: center;
     margin-top: 50px;
-    padding-top: 15px;
+    text-align: center;
     border-top: 1px solid #38bdf8;
+    padding-top: 15px;
     color: #94a3b8;
-    font-size: 0.9em;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .container {
-        padding: 30px;
-    }
-
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
+    .container { padding: 30px; }
+    header h1 { font-size: 2.2em; }
 }
 </style>
 </head>
 
 <body>
-<div class="container">
 
+<canvas id="matrix-bg"></canvas>
+
+<div class="container">
 <header>
     <h1>Mouna Elbahloul</h1>
     <p>Pentester | Cybersecurity Specialist</p>
@@ -178,50 +168,42 @@ footer {
     <h2>About Me</h2>
     <p>
         Cybersecurity specialist focused on penetration testing.
-        Conduct authorized assessments to find vulnerabilities and provide remediation.
+        Conduct authorized assessments to identify vulnerabilities and provide remediation.
     </p>
 </section>
 
 <section>
     <h2>Technical Skills</h2>
     <ul>
-        <li>Information Gathering: recon-ng, theHarvester, SpiderFoot</li>
-        <li>Vulnerability Identification: Nmap (port scanning, service enumeration, vulnerability detection)</li>
-        <li>Vulnerability Analysis</li>
-        <li>Vulnerability Exploitation: Metasploit Framework, Exploit Database</li>
-        <li>Post-Exploitation & Maintaining Access: Mimikatz, Backdoors, Persistence Techniques</li>
-        <li>Digital Forensics Tools: FTK Imager, Autopsy</li>
+        <li>Recon: recon-ng, theHarvester, SpiderFoot</li>
+        <li>Scanning & Enumeration: Nmap</li>
+        <li>Exploitation: Metasploit, Exploit-DB</li>
+        <li>Post-Exploitation: Mimikatz, Persistence</li>
+        <li>Forensics: FTK Imager, Autopsy</li>
     </ul>
 </section>
 
 <section>
     <h2>Projects</h2>
+
     <div class="project">
-        <h3>Company: Casablanca Finance City (CFC)</h3>
-        <p><strong>Scope:</strong> Web & Network Pentesting</p>
-        <p><strong>Tools:</strong> Recon-ng, theHarvester, SpiderFoot, Nmap, Zaproxy, Metasploit</p>
-        <p><strong>Outcome:</strong> Vulnerabilities identified & documented.</p>
+        <h3>Casablanca Finance City (CFC)</h3>
+        <p>Web & Network Pentesting</p>
     </div>
 
     <div class="project">
-        <h3>Company: Régie 3</h3>
-        <p><strong>Scope:</strong> Web & Network Pentesting</p>
-        <p><strong>Tools:</strong> Recon-ng, theHarvester, SpiderFoot, Nmap, Zaproxy, Metasploit</p>
-        <p><strong>Outcome:</strong> Vulnerabilities identified & documented.</p>
+        <h3>Régie 3</h3>
+        <p>Web & Network Pentesting</p>
     </div>
 
     <div class="project">
-        <h3>Company: ISGA</h3>
-        <p><strong>Scope:</strong> Penetration Testing on Web, Network, and Three Internal Platforms</p>
-        <p><strong>Tools:</strong> Recon-ng, theHarvester, SpiderFoot, Nmap, Nikto, Zaproxy, Metasploit</p>
-        <p><strong>Outcome:</strong> Vulnerabilities identified & documented.</p>
+        <h3>ISGA</h3>
+        <p>Web, Network & Internal Platforms Pentesting</p>
     </div>
 
     <div class="project">
-        <h3>Company: RMO</h3>
-        <p><strong>Scope:</strong> Conducted a security audit following a ransomware incident</p>
-        <p><strong>Tools:</strong> FTK Imager, Autopsy, Nmap</p>
-        <p><strong>Outcome:</strong> Attack vector and ransomware source successfully identified.</p>
+        <h3>RMO</h3>
+        <p>Ransomware forensic investigation</p>
     </div>
 </section>
 
@@ -229,17 +211,53 @@ footer {
     <h2>Contact</h2>
     <p>Email: <a href="mailto:mounaelbahloul@gmail.com">mounaelbahloul@gmail.com</a></p>
     <a href="https://github.com/MoUnA19B" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/tonprofil" target="_blank">LinkedIn</a>
+    <a href="#" target="_blank">LinkedIn</a>
     <br>
-    <a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">
-        Download CV
-    </a>
+    <a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">Download CV</a>
 </section>
 
 <footer>
     © 2026 Mouna Elbahloul · Pentesting Portfolio
 </footer>
-
 </div>
+
+<script>
+const canvas = document.getElementById("matrix-bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const chars = "01<>[]{}$#@!ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const fontSize = 16;
+const columns = Math.floor(canvas.width / fontSize);
+const drops = Array(columns).fill(1);
+
+function drawMatrix() {
+    ctx.fillStyle = "rgba(11,19,43,0.15)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#38bdf8";
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.97) {
+            drops[i] = 0;
+        }
+        drops[i]++;
+    }
+}
+
+setInterval(drawMatrix, 50);
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
+
 </body>
 </html>
