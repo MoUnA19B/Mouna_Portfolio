@@ -9,36 +9,37 @@
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            background: linear-gradient(135deg, #eef2f7, #f9fafb);
-            color: #1f2933;
+            background: radial-gradient(circle at top, #0f172a, #020617);
+            color: #e5e7eb;
         }
 
         .container {
             max-width: 1000px;
             margin: 40px auto;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            background: #020617;
+            border-radius: 14px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
             padding: 50px;
+            border: 1px solid #1e293b;
         }
 
         header {
             text-align: center;
             padding-bottom: 40px;
-            border-bottom: 3px solid #0a3d62;
+            border-bottom: 2px solid #1e293b;
         }
 
         header h1 {
             margin: 0;
             font-size: 2.8em;
-            color: #0a3d62;
+            color: #38bdf8;
         }
 
         header p {
             margin-top: 10px;
             font-size: 1.3em;
             font-weight: 600;
-            color: #475569;
+            color: #94a3b8;
         }
 
         section {
@@ -46,15 +47,16 @@
         }
 
         h2 {
-            color: #0a3d62;
-            border-left: 6px solid #0a3d62;
-            padding-left: 12px;
+            color: #38bdf8;
+            border-left: 6px solid #38bdf8;
+            padding-left: 14px;
             font-size: 1.6em;
         }
 
         p {
             line-height: 1.7;
             font-size: 1.05em;
+            color: #cbd5f5;
         }
 
         ul {
@@ -66,32 +68,34 @@
         }
 
         .project {
-            background: #f8fafc;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            border-left: 6px solid #0a3d62;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            background: #020617;
+            padding: 22px;
+            margin-top: 22px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            border-left: 6px solid #38bdf8;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
         }
 
         .project h3 {
             margin-top: 0;
-            color: #1e40af;
+            color: #7dd3fc;
         }
 
         .methodology {
-            background: #eef4ff;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 6px solid #1e40af;
-            margin-top: 20px;
+            background: #020617;
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            border-left: 6px solid #7c3aed;
+            margin-top: 22px;
         }
 
         .contact a {
             display: inline-block;
             margin-right: 15px;
             margin-top: 10px;
-            color: #0a3d62;
+            color: #38bdf8;
             text-decoration: none;
             font-weight: 600;
         }
@@ -102,29 +106,29 @@
 
         .btn-cv {
             display: inline-block;
-            margin-top: 20px;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, #0a3d62, #1e40af);
-            color: white;
-            border-radius: 8px;
+            margin-top: 25px;
+            padding: 14px 30px;
+            background: linear-gradient(135deg, #38bdf8, #7c3aed);
+            color: #020617;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 8px 20px rgba(30,64,175,0.35);
+            box-shadow: 0 10px 30px rgba(56,189,248,0.35);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .btn-cv:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 28px rgba(30,64,175,0.45);
+            box-shadow: 0 16px 40px rgba(124,58,237,0.45);
         }
 
         footer {
             text-align: center;
             margin-top: 60px;
             padding-top: 25px;
-            border-top: 2px solid #e2e8f0;
+            border-top: 1px solid #1e293b;
             font-size: 0.9em;
-            color: #64748b;
+            color: #94a3b8;
         }
 
         @media (max-width: 768px) {
@@ -152,9 +156,9 @@
 <section>
     <h2>About Me</h2>
     <p>
-        Cybersecurity specialist with a strong focus on penetration testing.
-        I conduct authorized security assessments to identify application and infrastructure vulnerabilities,
-        providing clear, actionable remediation recommendations.
+        Cybersecurity specialist focused on penetration testing.
+        I conduct authorized security assessments to identify application
+        and infrastructure vulnerabilities and deliver clear remediation strategies.
     </p>
 </section>
 
@@ -176,39 +180,39 @@
         <h3>Casablanca Finance City (CFC)</h3>
         <p><strong>Scope:</strong> Web & Network Penetration Testing</p>
         <p><strong>Tools:</strong> Nmap, Burp Suite, Metasploit, Nikto</p>
-        <p><strong>Outcome:</strong> Identified vulnerabilities with remediation guidance.</p>
+        <p><strong>Outcome:</strong> Vulnerabilities identified with remediation guidance.</p>
     </div>
 
     <div class="project">
         <h3>Régie 3</h3>
         <p><strong>Scope:</strong> Web Application Security Testing</p>
         <p><strong>Tools:</strong> Burp Suite, OWASP ZAP, SQLmap</p>
-        <p><strong>Outcome:</strong> XSS vulnerabilities and security misconfigurations detected.</p>
+        <p><strong>Outcome:</strong> XSS and misconfigurations detected.</p>
     </div>
 
     <div class="project">
         <h3>ISGA</h3>
         <p><strong>Scope:</strong> Network Penetration Testing</p>
         <p><strong>Tools:</strong> Nmap, Metasploit, Hydra</p>
-        <p><strong>Outcome:</strong> Full network assessment with hardening recommendations.</p>
+        <p><strong>Outcome:</strong> Hardening recommendations delivered.</p>
     </div>
 
     <div class="project">
         <h3>RMO</h3>
         <p><strong>Scope:</strong> Web & Application Penetration Testing</p>
         <p><strong>Tools:</strong> Burp Suite, Nikto, SQLmap</p>
-        <p><strong>Outcome:</strong> OWASP Top 10 vulnerabilities identified and documented.</p>
+        <p><strong>Outcome:</strong> OWASP Top 10 vulnerabilities identified.</p>
     </div>
 
-    <p><em>All engagements were conducted in authorized and controlled environments.</em></p>
+    <p><em>All engagements were performed in authorized and controlled environments.</em></p>
 </section>
 
 <section>
     <h2>Methodology</h2>
     <div class="methodology">
-        <p><strong>Reconnaissance:</strong> Asset discovery, service enumeration, technology fingerprinting.</p>
-        <p><strong>Exploitation:</strong> Validation and exploitation of identified vulnerabilities.</p>
-        <p><strong>Reporting:</strong> Clear documentation, risk assessment, and remediation strategy.</p>
+        <p><strong>Reconnaissance:</strong> Asset discovery and enumeration.</p>
+        <p><strong>Exploitation:</strong> Validation of identified vulnerabilities.</p>
+        <p><strong>Reporting:</strong> Risk-based reporting and remediation roadmap.</p>
     </div>
 </section>
 
