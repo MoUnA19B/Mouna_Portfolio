@@ -7,33 +7,34 @@
 
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            max-width: 900px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 950px;
             margin: auto;
-            background-color: #f4f6f8;
+            background-color: #f0f2f5;
             color: #333;
-            padding: 20px;
+            padding: 25px;
         }
 
         header {
             text-align: center;
-            padding-bottom: 20px;
+            padding-bottom: 25px;
             border-bottom: 3px solid #0a3d62;
         }
 
         header h1 {
             margin: 0;
             color: #0a3d62;
+            font-size: 2.5em;
         }
 
         header p {
             margin-top: 5px;
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-weight: bold;
         }
 
         section {
-            margin-top: 35px;
+            margin-top: 40px;
         }
 
         h2 {
@@ -52,12 +53,19 @@
             padding: 15px;
             margin-top: 15px;
             border-left: 5px solid #0a3d62;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 7px rgba(0,0,0,0.1);
         }
 
         .project h3 {
             margin-top: 0;
             color: #1e3799;
+        }
+
+        .methodology {
+            background-color: #e6f0ff;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 5px solid #1e3799;
         }
 
         footer {
@@ -78,6 +86,20 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .btn-cv {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0a3d62;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-cv:hover {
+            background-color: #1e3799;
+        }
     </style>
 </head>
 
@@ -89,27 +111,29 @@
 </header>
 
 <section>
-    <h2>À propos</h2>
+    <h2>À propos / About</h2>
     <p>
         Spécialisée en cybersécurité avec un focus sur le pentesting.
-        J’effectue des tests d’intrusion afin d’identifier les vulnérabilités
-        techniques et applicatives, et de proposer des recommandations de sécurité adaptées.
+        J’effectue des tests d’intrusion afin d’identifier les vulnérabilités techniques et applicatives, et de proposer des recommandations de sécurité adaptées.
+    </p>
+    <p>
+        Specialized in cybersecurity with a focus on penetration testing. I perform authorized security assessments to identify technical and application vulnerabilities and provide actionable remediation recommendations.
     </p>
 </section>
 
 <section>
-    <h2>Compétences</h2>
+    <h2>Compétences / Skills</h2>
     <ul>
-        <li>Pentesting Web & Réseau</li>
+        <li>Pentesting Web & Network</li>
         <li>OWASP Top 10</li>
-        <li>Analyse de vulnérabilités</li>
-        <li>Reconnaissance, exploitation et post-exploitation</li>
+        <li>Vulnerability Analysis</li>
+        <li>Reconnaissance → Exploitation → Reporting</li>
         <li>Linux / Windows</li>
     </ul>
 </section>
 
 <section>
-    <h2>Projets – Tests d’intrusion</h2>
+    <h2>Projets – Tests d’intrusion / Pentesting Projects</h2>
 
     <div class="project">
         <h3>Casablanca Finance City (CFC)</h3>
@@ -143,14 +167,24 @@
         <p><strong>Résultat :</strong> Détection de failles OWASP Top 10 et propositions de correctifs.</p>
     </div>
 
-    <p><em>Les tests ont été réalisés dans un cadre autorisé et contrôlé.</em></p>
+    <p><em>Les tests ont été réalisés dans un cadre autorisé et contrôlé / Tests were performed in an authorized and controlled environment.</em></p>
 </section>
 
 <section>
-    <h2>Contact</h2>
+    <h2>Méthodologie / Methodology</h2>
+    <div class="methodology">
+        <p><strong>Reconnaissance / Recon:</strong> Collecte d’informations sur les cibles (ports, services, technologies).</p>
+        <p><strong>Exploitation / Exploitation:</strong> Identification et exploitation des vulnérabilités détectées.</p>
+        <p><strong>Reporting / Reporting:</strong> Documentation des failles, recommandations et plan de remédiation.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Contact / Contact</h2>
     <p>Email : <a href="mailto:tonemail@email.com">tonemail@email.com</a></p>
     <p>GitHub : <a href="https://github.com/MoUnA19B" target="_blank">github.com/MoUnA19B</a></p>
     <p>LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">linkedin.com/in/tonprofil</a></p>
+    <a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">Télécharger mon CV / Download CV</a>
 </section>
 
 <footer>
