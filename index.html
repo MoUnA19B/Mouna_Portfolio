@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouna Elbahloul | Portfolio</title>
+    <title>Mouna Elbahloul | Pentesting Portfolio</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             max-width: 900px;
             margin: auto;
-            background-color: #f5f7fa;
+            background-color: #f4f6f8;
             color: #333;
             padding: 20px;
         }
@@ -17,26 +18,27 @@
         header {
             text-align: center;
             padding-bottom: 20px;
-            border-bottom: 2px solid #004080;
+            border-bottom: 3px solid #0a3d62;
         }
 
         header h1 {
             margin: 0;
-            color: #004080;
+            color: #0a3d62;
         }
 
         header p {
-            margin: 5px 0 0;
-            font-style: italic;
+            margin-top: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
         }
 
         section {
-            margin-top: 30px;
+            margin-top: 35px;
         }
 
         h2 {
-            color: #004080;
-            border-bottom: 2px solid #004080;
+            color: #0a3d62;
+            border-bottom: 2px solid #0a3d62;
             padding-bottom: 5px;
         }
 
@@ -46,24 +48,31 @@
         }
 
         .project {
-            background-color: #e6f0ff;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-left: 4px solid #004080;
+            background-color: #ffffff;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 5px solid #0a3d62;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: #1e3799;
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
             padding-top: 20px;
-            border-top: 2px solid #004080;
+            border-top: 2px solid #0a3d62;
             font-size: 0.9em;
             color: #555;
         }
 
         a {
-            color: #004080;
+            color: #0a3d62;
             text-decoration: none;
+            font-weight: bold;
         }
 
         a:hover {
@@ -71,6 +80,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -81,56 +91,70 @@
 <section>
     <h2>À propos</h2>
     <p>
-        Spécialisée en cybersécurité avec un focus sur le pentesting et l’analyse de vulnérabilités.
-        Je détecte les failles, sécurise les systèmes et améliore la sécurité globale.
+        Spécialisée en cybersécurité avec un focus sur le pentesting.
+        J’effectue des tests d’intrusion afin d’identifier les vulnérabilités
+        techniques et applicatives, et de proposer des recommandations de sécurité adaptées.
     </p>
 </section>
 
 <section>
     <h2>Compétences</h2>
     <ul>
-        <li>Pentesting Web</li>
+        <li>Pentesting Web & Réseau</li>
         <li>OWASP Top 10</li>
         <li>Analyse de vulnérabilités</li>
-        <li>Wazuh SIEM</li>
+        <li>Reconnaissance, exploitation et post-exploitation</li>
         <li>Linux / Windows</li>
     </ul>
 </section>
 
 <section>
-    <h2>Projets</h2>
+    <h2>Projets – Tests d’intrusion</h2>
 
     <div class="project">
-        <h3>Labs TryHackMe</h3>
-        <p>Objectif : Améliorer mes compétences en pentesting et sécurité réseau.</p>
-        <p>Outils : Kali Linux, Burp Suite, Nmap</p>
-        <p>Résultat : Analyse complète et documentation des vulnérabilités.</p>
+        <h3>Casablanca Finance City (CFC)</h3>
+        <p><strong>Type :</strong> Test d’intrusion Web & Réseau</p>
+        <p><strong>Objectif :</strong> Évaluer la posture de sécurité des systèmes critiques.</p>
+        <p><strong>Outils :</strong> Nmap, Burp Suite, Metasploit, Nikto</p>
+        <p><strong>Résultat :</strong> Identification de vulnérabilités et recommandations de remédiation.</p>
     </div>
 
     <div class="project">
-        <h3>Pentesting Web (tests XSS, SQLi)</h3>
-        <p>Objectif : Identifier les failles de sécurité sur des applications web.</p>
-        <p>Outils : Burp Suite, OWASP ZAP, Nmap</p>
-        <p>Résultat : Détection et documentation de failles XSS et SQLi.</p>
+        <h3>Régie 3</h3>
+        <p><strong>Type :</strong> Test d’intrusion Web</p>
+        <p><strong>Objectif :</strong> Tester la sécurité des applications web internes.</p>
+        <p><strong>Outils :</strong> Burp Suite, OWASP ZAP, SQLmap</p>
+        <p><strong>Résultat :</strong> Détection de failles XSS et mauvaises configurations.</p>
     </div>
 
     <div class="project">
-        <h3>Analyse d’alertes SIEM</h3>
-        <p>Objectif : Surveiller et analyser les alertes de sécurité sur Wazuh SIEM.</p>
-        <p>Outils : Wazuh, Kibana</p>
-        <p>Résultat : Détection proactive d’incidents et rapports détaillés.</p>
+        <h3>ISGA</h3>
+        <p><strong>Type :</strong> Test d’intrusion Réseau</p>
+        <p><strong>Objectif :</strong> Identifier les services exposés et failles réseau.</p>
+        <p><strong>Outils :</strong> Nmap, Metasploit, Hydra</p>
+        <p><strong>Résultat :</strong> Analyse complète et recommandations de durcissement.</p>
     </div>
+
+    <div class="project">
+        <h3>RMO</h3>
+        <p><strong>Type :</strong> Test d’intrusion Web & Applicatif</p>
+        <p><strong>Objectif :</strong> Identifier les vulnérabilités critiques applicatives.</p>
+        <p><strong>Outils :</strong> Burp Suite, Nikto, SQLmap</p>
+        <p><strong>Résultat :</strong> Détection de failles OWASP Top 10 et propositions de correctifs.</p>
+    </div>
+
+    <p><em>Les tests ont été réalisés dans un cadre autorisé et contrôlé.</em></p>
 </section>
 
 <section>
     <h2>Contact</h2>
-    <p>Email : <a href="mailto:mounaelbahloul@gmail.com">tonemail@email.com</a></p>
-    <p>LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">mon profil</a></p>
-    <p>GitHub : <a href="https://github.com/MoUnA19B" target="_blank">mon GitHub</a></p>
+    <p>Email : <a href="mailto:tonemail@email.com">tonemail@email.com</a></p>
+    <p>GitHub : <a href="https://github.com/MoUnA19B" target="_blank">github.com/MoUnA19B</a></p>
+    <p>LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">linkedin.com/in/tonprofil</a></p>
 </section>
 
 <footer>
-    <p>© 2026 Mouna Elbahloul | Tous droits réservés</p>
+    <p>© 2026 Mouna Elbahloul – Pentesting Portfolio</p>
 </footer>
 
 </body>
