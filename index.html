@@ -7,126 +7,165 @@
 
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 950px;
-            margin: auto;
-            background-color: #f0f2f5;
-            color: #333;
-            padding: 25px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #eef2f7, #f9fafb);
+            color: #1f2933;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            padding: 50px;
         }
 
         header {
             text-align: center;
-            padding-bottom: 25px;
+            padding-bottom: 40px;
             border-bottom: 3px solid #0a3d62;
         }
 
         header h1 {
             margin: 0;
+            font-size: 2.8em;
             color: #0a3d62;
-            font-size: 2.5em;
         }
 
         header p {
-            margin-top: 5px;
-            font-size: 1.2em;
-            font-weight: bold;
+            margin-top: 10px;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #475569;
         }
 
         section {
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
         h2 {
             color: #0a3d62;
-            border-bottom: 2px solid #0a3d62;
-            padding-bottom: 5px;
+            border-left: 6px solid #0a3d62;
+            padding-left: 12px;
+            font-size: 1.6em;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 1.05em;
         }
 
         ul {
-            list-style-type: square;
-            margin-left: 20px;
+            margin-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
         }
 
         .project {
-            background-color: #ffffff;
-            padding: 15px;
-            margin-top: 15px;
-            border-left: 5px solid #0a3d62;
-            box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+            background: #f8fafc;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border-left: 6px solid #0a3d62;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
         }
 
         .project h3 {
             margin-top: 0;
-            color: #1e3799;
+            color: #1e40af;
         }
 
         .methodology {
-            background-color: #e6f0ff;
-            padding: 15px;
-            margin-top: 15px;
-            border-left: 5px solid #1e3799;
+            background: #eef4ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 6px solid #1e40af;
+            margin-top: 20px;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 2px solid #0a3d62;
-            font-size: 0.9em;
-            color: #555;
-        }
-
-        a {
+        .contact a {
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 10px;
             color: #0a3d62;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
         }
 
-        a:hover {
+        .contact a:hover {
             text-decoration: underline;
         }
 
         .btn-cv {
             display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #0a3d62;
+            margin-top: 20px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #0a3d62, #1e40af);
             color: white;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(30,64,175,0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .btn-cv:hover {
-            background-color: #1e3799;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(30,64,175,0.45);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+            font-size: 0.9em;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            header h1 {
+                font-size: 2.2em;
+            }
         }
     </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <header>
     <h1>Mouna Elbahloul</h1>
-    <p>Pentester / Cybersecurity</p>
+    <p>Pentester | Cybersecurity Specialist</p>
 </header>
 
 <section>
     <h2>About Me</h2>
     <p>
-        Specialized in cybersecurity with a focus on penetration testing.
-        I perform authorized security assessments to identify technical and application vulnerabilities,
-        and provide actionable remediation recommendations.
+        Cybersecurity specialist with a strong focus on penetration testing.
+        I conduct authorized security assessments to identify application and infrastructure vulnerabilities,
+        providing clear, actionable remediation recommendations.
     </p>
 </section>
 
 <section>
     <h2>Skills</h2>
     <ul>
-        <li>Web & Network Pentesting</li>
+        <li>Web & Network Penetration Testing</li>
         <li>OWASP Top 10</li>
-        <li>Vulnerability Analysis</li>
+        <li>Vulnerability Assessment</li>
         <li>Reconnaissance → Exploitation → Reporting</li>
-        <li>Linux / Windows</li>
+        <li>Linux & Windows Environments</li>
     </ul>
 </section>
 
@@ -135,59 +174,58 @@
 
     <div class="project">
         <h3>Casablanca Finance City (CFC)</h3>
-        <p><strong>Type:</strong> Web & Network Penetration Test</p>
-        <p><strong>Objective:</strong> Evaluate the security posture of critical systems.</p>
+        <p><strong>Scope:</strong> Web & Network Penetration Testing</p>
         <p><strong>Tools:</strong> Nmap, Burp Suite, Metasploit, Nikto</p>
-        <p><strong>Result:</strong> Vulnerabilities identified with remediation recommendations.</p>
+        <p><strong>Outcome:</strong> Identified vulnerabilities with remediation guidance.</p>
     </div>
 
     <div class="project">
         <h3>Régie 3</h3>
-        <p><strong>Type:</strong> Web Penetration Test</p>
-        <p><strong>Objective:</strong> Assess the security of internal web applications.</p>
+        <p><strong>Scope:</strong> Web Application Security Testing</p>
         <p><strong>Tools:</strong> Burp Suite, OWASP ZAP, SQLmap</p>
-        <p><strong>Result:</strong> XSS vulnerabilities and misconfigurations detected.</p>
+        <p><strong>Outcome:</strong> XSS vulnerabilities and security misconfigurations detected.</p>
     </div>
 
     <div class="project">
         <h3>ISGA</h3>
-        <p><strong>Type:</strong> Network Penetration Test</p>
-        <p><strong>Objective:</strong> Identify exposed services and network weaknesses.</p>
+        <p><strong>Scope:</strong> Network Penetration Testing</p>
         <p><strong>Tools:</strong> Nmap, Metasploit, Hydra</p>
-        <p><strong>Result:</strong> Full analysis with hardening recommendations.</p>
+        <p><strong>Outcome:</strong> Full network assessment with hardening recommendations.</p>
     </div>
 
     <div class="project">
         <h3>RMO</h3>
-        <p><strong>Type:</strong> Web & Application Penetration Test</p>
-        <p><strong>Objective:</strong> Identify critical application vulnerabilities.</p>
+        <p><strong>Scope:</strong> Web & Application Penetration Testing</p>
         <p><strong>Tools:</strong> Burp Suite, Nikto, SQLmap</p>
-        <p><strong>Result:</strong> OWASP Top 10 vulnerabilities detected with remediation proposals.</p>
+        <p><strong>Outcome:</strong> OWASP Top 10 vulnerabilities identified and documented.</p>
     </div>
 
-    <p><em>All tests were performed in an authorized and controlled environment.</em></p>
+    <p><em>All engagements were conducted in authorized and controlled environments.</em></p>
 </section>
 
 <section>
     <h2>Methodology</h2>
     <div class="methodology">
-        <p><strong>Recon:</strong> Information gathering on targets (ports, services, technologies).</p>
-        <p><strong>Exploitation:</strong> Identification and exploitation of detected vulnerabilities.</p>
-        <p><strong>Reporting:</strong> Documentation of vulnerabilities, recommendations, and remediation plan.</p>
+        <p><strong>Reconnaissance:</strong> Asset discovery, service enumeration, technology fingerprinting.</p>
+        <p><strong>Exploitation:</strong> Validation and exploitation of identified vulnerabilities.</p>
+        <p><strong>Reporting:</strong> Clear documentation, risk assessment, and remediation strategy.</p>
     </div>
 </section>
 
-<section>
+<section class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:tonemail@email.com">tonemail@email.com</a></p>
-    <p>GitHub: <a href="https://github.com/MoUnA19B" target="_blank">github.com/MoUnA19B</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/tonprofil" target="_blank">linkedin.com/in/tonprofil</a></p>
+    <a href="https://github.com/MoUnA19B" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/tonprofil" target="_blank">LinkedIn</a>
+    <br>
     <a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">Download CV</a>
 </section>
 
 <footer>
-    <p>© 2026 Mouna Elbahloul – Pentesting Portfolio</p>
+    © 2026 Mouna Elbahloul · Pentesting Portfolio
 </footer>
+
+</div>
 
 </body>
 </html>
