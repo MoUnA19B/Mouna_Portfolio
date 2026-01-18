@@ -6,8 +6,11 @@
 <title>Mouna Elbahloul | Pentesting Portfolio</title>
 
 <style>
+    /* FONT + BODY */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
     body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Roboto', sans-serif;
         margin: 0;
         min-height: 100vh;
         background: linear-gradient(135deg, #0b132b, #1c1f4b, #3a0ca3);
@@ -18,33 +21,35 @@
         color: #e0e0e0;
     }
 
+    /* CONTAINER */
     .container {
         width: 100%;
         max-width: 900px;
         background: rgba(20, 25, 50, 0.95);
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-        border: 1px solid #3a0ca3;
-        overflow: hidden;
+        padding: 50px;
+        border-radius: 25px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px #38bdf8;
+        border: 1px solid #38bdf8;
     }
 
     header {
         text-align: center;
         padding-bottom: 30px;
-        border-bottom: 2px solid #3a0ca3;
+        border-bottom: 2px solid #38bdf8;
     }
 
     header h1 {
-        font-size: 2.5em;
+        font-size: 3em;
         color: #38bdf8;
         margin: 0;
+        text-shadow: 0 0 8px #38bdf8;
     }
 
     header p {
         margin-top: 5px;
         color: #80ffdb;
         font-weight: bold;
+        text-shadow: 0 0 6px #80ffdb;
     }
 
     section {
@@ -52,10 +57,11 @@
     }
 
     h2 {
-        border-left: 5px solid #38bdf8;
-        padding-left: 10px;
-        font-size: 1.6em;
+        border-left: 6px solid #38bdf8;
+        padding-left: 12px;
+        font-size: 1.8em;
         color: #38bdf8;
+        text-shadow: 0 0 4px #38bdf8;
     }
 
     p, li {
@@ -67,60 +73,66 @@
         margin-left: 20px;
     }
 
+    /* PROJECT BOX */
     .project {
-        background-color: rgba(30, 40, 80, 0.9);
-        padding: 20px;
+        background-color: rgba(30, 40, 80, 0.95);
+        padding: 25px;
         margin-top: 20px;
-        border-radius: 12px;
-        border-left: 5px solid #38bdf8;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        border-radius: 15px;
+        border-left: 6px solid #38bdf8;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 15px #38bdf8;
     }
 
     .project h3 {
         margin-top: 0;
         color: #80ffdb;
+        text-shadow: 0 0 6px #80ffdb;
     }
 
     .methodology {
-        background-color: rgba(30, 40, 80, 0.9);
-        padding: 20px;
+        background-color: rgba(30, 40, 80, 0.95);
+        padding: 25px;
         margin-top: 20px;
-        border-left: 5px solid #7c3aed;
-        border-radius: 12px;
+        border-left: 6px solid #7c3aed;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 15px #7c3aed;
     }
 
-    /* BUTTON CV STYLE + ICON */
+    /* BUTTON CV NEON */
     .btn-cv {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
-        margin-top: 25px;
-        padding: 15px 35px;
+        gap: 12px;
+        margin-top: 30px;
+        padding: 15px 40px;
         font-weight: bold;
-        font-size: 1em;
+        font-size: 1.1em;
         text-decoration: none;
         color: #0b132b;
         background: linear-gradient(135deg, #38bdf8, #7c3aed);
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(56,189,248,0.5);
-        transition: transform 0.2s, box-shadow 0.2s;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #38bdf8, 0 0 40px #7c3aed, 0 4px 20px rgba(0,0,0,0.6);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
     }
 
     .btn-cv:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 28px rgba(124,58,237,0.7);
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 0 25px #38bdf8, 0 0 50px #7c3aed, 0 8px 25px rgba(0,0,0,0.7);
     }
 
     .btn-cv img {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
+        filter: drop-shadow(0 0 6px #38bdf8);
     }
 
     .contact a {
         color: #80ffdb;
         text-decoration: none;
-        margin-right: 15px;
+        margin-right: 20px;
         font-weight: bold;
+        text-shadow: 0 0 4px #80ffdb;
     }
 
     .contact a:hover {
@@ -138,18 +150,21 @@
 
     @media (max-width: 768px) {
         .container {
-            padding: 25px;
+            padding: 30px;
         }
 
         header h1 {
-            font-size: 2em;
+            font-size: 2.2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
         }
     }
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
 <header>
@@ -207,15 +222,6 @@
     </div>
 </section>
 
-<section>
-    <h2>Methodology</h2>
-    <div class="methodology">
-        <p><strong>Recon:</strong> Information gathering on targets.</p>
-        <p><strong>Exploitation:</strong> Test & validate vulnerabilities.</p>
-        <p><strong>Reporting:</strong> Risk documentation & remediation plan.</p>
-    </div>
-</section>
-
 <section class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:tonemail@email.com">tonemail@email.com</a></p>
@@ -232,6 +238,5 @@
 </footer>
 
 </div>
-
 </body>
 </html>
