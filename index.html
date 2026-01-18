@@ -8,50 +8,31 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-    /* BODY + ANIMATED BACKGROUND */
+    /* BODY */
     body {
         font-family: 'Roboto', sans-serif;
         margin: 0;
         min-height: 100vh;
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 20px;
+        background: #0b132b; /* fond sombre */
         color: #e0e0e0;
-        overflow: hidden;
     }
 
-    body::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(45deg, #0b132b, #1c1f4b, #3a0ca3, #38bdf8, #7c3aed);
-        background-size: 400% 400%;
-        animation: animateBG 20s linear infinite;
-        z-index: -1;
-        filter: blur(60px);
-        opacity: 0.6;
-    }
-
-    @keyframes animateBG {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    /* CONTAINER */
+    /* CONTAINER AVEC GLOW */
     .container {
         width: 100%;
         max-width: 900px;
         background: rgba(20, 25, 50, 0.95);
         padding: 50px;
         border-radius: 25px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.6);
         border: 1px solid #38bdf8;
+        box-shadow: 
+            0 0 60px rgba(56, 223, 248, 0.6),   /* glow bleu */
+            0 0 40px rgba(124, 58, 237, 0.4),   /* glow violet */
+            0 15px 40px rgba(0,0,0,0.6);        /* ombre classique */
         position: relative;
         z-index: 1;
     }
@@ -66,14 +47,14 @@
         font-size: 3em;
         color: #38bdf8;
         margin: 0;
-        text-shadow: 0 0 6px #38bdf8;
+        text-shadow: 0 0 8px #38bdf8; /* glow léger sur le titre */
     }
 
     header p {
         margin-top: 5px;
         color: #80ffdb;
         font-weight: bold;
-        text-shadow: 0 0 4px #80ffdb;
+        text-shadow: 0 0 6px #80ffdb;
     }
 
     section {
@@ -85,7 +66,7 @@
         padding-left: 12px;
         font-size: 1.8em;
         color: #38bdf8;
-        text-shadow: 0 0 2px #38bdf8;
+        text-shadow: 0 0 4px #38bdf8;
     }
 
     p, li {
@@ -112,6 +93,7 @@
         text-shadow: 0 0 4px #80ffdb;
     }
 
+    /* BOUTON CV SOBRE */
     .btn-cv {
         display: inline-block;
         margin-top: 30px;
