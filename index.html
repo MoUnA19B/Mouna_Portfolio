@@ -1,37 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Mouna | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouna Elbahloul | Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            background-color: #f5f7fa;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #004080;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #004080;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+        }
+
+        section {
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #004080;
+            border-bottom: 2px solid #004080;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        .project {
+            background-color: #e6f0ff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #004080;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #004080;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Mouna Elbahloul</h1>
-<p>Pentester / Cybersécurité</p>
+<header>
+    <h1>Mouna Elbahloul</h1>
+    <p>Pentester / Cybersécurité</p>
+</header>
 
-<h2>À propos</h2>
-<p>
-Spécialisée en cybersécurité avec un focus sur le pentesting
-et l’analyse de vulnérabilités.
-</p>
+<section>
+    <h2>À propos</h2>
+    <p>
+        Spécialisée en cybersécurité avec un focus sur le pentesting et l’analyse de vulnérabilités.
+        Je détecte les failles, sécurise les systèmes et améliore la sécurité globale.
+    </p>
+</section>
 
-<h2>Compétences</h2>
-<ul>
-    <li>Pentesting Web</li>
-    <li>OWASP Top 10</li>
-    <li>Analyse de vulnérabilités</li>
-    <li>Wazuh SIEM</li>
-    <li>Linux / Windows</li>
-</ul>
+<section>
+    <h2>Compétences</h2>
+    <ul>
+        <li>Pentesting Web</li>
+        <li>OWASP Top 10</li>
+        <li>Analyse de vulnérabilités</li>
+        <li>Wazuh SIEM</li>
+        <li>Linux / Windows</li>
+    </ul>
+</section>
 
-<h2>Projets</h2>
-<ul>
-    <li>Labs TryHackMe</li>
-    <li>Pentesting Web (tests XSS, SQLi)</li>
-    <li>Analyse d’alertes SIEM</li>
-</ul>
+<section>
+    <h2>Projets</h2>
 
-<h2>Contact</h2>
-<p>Email : tonemail@email.com</p>
+    <div class="project">
+        <h3>Labs TryHackMe</h3>
+        <p>Objectif : Améliorer mes compétences en pentesting et sécurité réseau.</p>
+        <p>Outils : Kali Linux, Burp Suite, Nmap</p>
+        <p>Résultat : Analyse complète et documentation des vulnérabilités.</p>
+    </div>
+
+    <div class="project">
+        <h3>Pentesting Web (tests XSS, SQLi)</h3>
+        <p>Objectif : Identifier les failles de sécurité sur des applications web.</p>
+        <p>Outils : Burp Suite, OWASP ZAP, Nmap</p>
+        <p>Résultat : Détection et documentation de failles XSS et SQLi.</p>
+    </div>
+
+    <div class="project">
+        <h3>Analyse d’alertes SIEM</h3>
+        <p>Objectif : Surveiller et analyser les alertes de sécurité sur Wazuh SIEM.</p>
+        <p>Outils : Wazuh, Kibana</p>
+        <p>Résultat : Détection proactive d’incidents et rapports détaillés.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email : <a href="mailto:mounaelbahloul@gmail.com">tonemail@email.com</a></p>
+    <p>LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">mon profil</a></p>
+    <p>GitHub : <a href="https://github.com/MoUnA19B" target="_blank">mon GitHub</a></p>
+</section>
+
+<footer>
+    <p>© 2026 Mouna Elbahloul | Tous droits réservés</p>
+</footer>
 
 </body>
 </html>
