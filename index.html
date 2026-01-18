@@ -9,17 +9,23 @@
     body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
-        background-color: #0b132b; /* Dark Blue Background */
+        background: linear-gradient(135deg, #0b132b, #1c1f4b, #3a0ca3);
         color: #e0e0e0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
     }
 
     .container {
+        width: 100%;
         max-width: 900px;
-        margin: 40px auto;
-        background-color: #1c1f3b; /* Dark Card */
+        background: rgba(20, 25, 50, 0.95); /* slightly lighter dark */
         padding: 40px;
-        border-radius: 15px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        border: 1px solid #3a0ca3;
     }
 
     header {
@@ -30,7 +36,7 @@
 
     header h1 {
         font-size: 2.5em;
-        color: #3a0ca3; /* Violet */
+        color: #38bdf8;
         margin: 0;
     }
 
@@ -45,14 +51,15 @@
     }
 
     h2 {
-        border-left: 5px solid #3a0ca3;
+        border-left: 5px solid #38bdf8;
         padding-left: 10px;
         font-size: 1.6em;
-        color: #3a0ca3;
+        color: #38bdf8;
     }
 
     p, li {
         line-height: 1.6;
+        color: #cbd5f5;
     }
 
     ul {
@@ -60,12 +67,12 @@
     }
 
     .project {
-        background-color: #141850;
+        background-color: rgba(30, 40, 80, 0.9);
         padding: 20px;
         margin-top: 20px;
         border-radius: 12px;
-        border-left: 5px solid #3a0ca3;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        border-left: 5px solid #38bdf8;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     }
 
     .project h3 {
@@ -74,147 +81,6 @@
     }
 
     .methodology {
-        background-color: #141850;
+        background-color: rgba(30, 40, 80, 0.9);
         padding: 20px;
-        margin-top: 20px;
-        border-left: 5px solid #3a0ca3;
-        border-radius: 12px;
-    }
-
-    /* BUTTON CV STYLE */
-    .btn-cv {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 15px 35px;
-        font-weight: bold;
-        font-size: 1em;
-        text-decoration: none;
-        color: #0b132b;
-        background: linear-gradient(135deg, #3a0ca3, #7209b7);
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(114,9,183,0.5);
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .btn-cv:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 28px rgba(114,9,183,0.7);
-    }
-
-    .contact a {
-        color: #80ffdb;
-        text-decoration: none;
-        margin-right: 15px;
-        font-weight: bold;
-    }
-
-    .contact a:hover {
-        text-decoration: underline;
-    }
-
-    footer {
-        text-align: center;
-        margin-top: 50px;
-        padding-top: 15px;
-        border-top: 1px solid #3a0ca3;
-        color: #94a3b8;
-        font-size: 0.9em;
-    }
-
-    @media (max-width: 768px) {
-        .container {
-            padding: 25px;
-        }
-
-        header h1 {
-            font-size: 2em;
-        }
-    }
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<header>
-    <h1>Mouna Elbahloul</h1>
-    <p>Pentester | Cybersecurity Specialist</p>
-</header>
-
-<section>
-    <h2>About Me</h2>
-    <p>
-        Cybersecurity specialist focused on penetration testing.
-        Conduct authorized assessments to find vulnerabilities and provide remediation.
-    </p>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li>Web & Network Pentesting</li>
-        <li>OWASP Top 10</li>
-        <li>Vulnerability Analysis</li>
-        <li>Recon → Exploitation → Reporting</li>
-        <li>Linux & Windows Environments</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>Casablanca Finance City (CFC)</h3>
-        <p><strong>Scope:</strong> Web & Network Pentesting</p>
-        <p><strong>Tools:</strong> Nmap, Burp Suite, Metasploit, Nikto</p>
-        <p><strong>Outcome:</strong> Vulnerabilities identified & documented.</p>
-    </div>
-
-    <div class="project">
-        <h3>Régie 3</h3>
-        <p><strong>Scope:</strong> Web Application Testing</p>
-        <p><strong>Tools:</strong> Burp Suite, SQLmap, OWASP ZAP</p>
-        <p><strong>Outcome:</strong> XSS and misconfigurations detected.</p>
-    </div>
-
-    <div class="project">
-        <h3>ISGA</h3>
-        <p><strong>Scope:</strong> Network Penetration Testing</p>
-        <p><strong>Tools:</strong> Nmap, Metasploit, Hydra</p>
-        <p><strong>Outcome:</strong> Hardening recommendations provided.</p>
-    </div>
-
-    <div class="project">
-        <h3>RMO</h3>
-        <p><strong>Scope:</strong> Web & App Testing</p>
-        <p><strong>Tools:</strong> Burp Suite, Nikto, SQLmap</p>
-        <p><strong>Outcome:</strong> OWASP Top 10 vulnerabilities found.</p>
-    </div>
-</section>
-
-<section>
-    <h2>Methodology</h2>
-    <div class="methodology">
-        <p><strong>Recon:</strong> Information gathering on targets.</p>
-        <p><strong>Exploitation:</strong> Test & validate vulnerabilities.</p>
-        <p><strong>Reporting:</strong> Risk documentation & remediation plan.</p>
-    </div>
-</section>
-
-<section class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:tonemail@email.com">tonemail@email.com</a></p>
-    <a href="https://github.com/MoUnA19B" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/tonprofil" target="_blank">LinkedIn</a>
-    <br>
-    <a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">Download CV</a>
-</section>
-
-<footer>
-    © 2026 Mouna Elbahloul · Pentesting Portfolio
-</footer>
-
-</div>
-
-</body>
-</html>
+        margin-top:
