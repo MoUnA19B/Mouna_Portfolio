@@ -6,143 +6,163 @@
 <title>Mouna Elbahloul | Pentesting Portfolio</title>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-    /* BODY */
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        background: #0b132b; /* fond sombre */
-        color: #e0e0e0;
-    }
+/* BODY */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #0b132b;
+    color: #e0e0e0;
+}
 
-    /* CONTAINER AVEC GLOW */
+/* CONTAINER AVEC GLOW UNIQUEMENT */
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 40px rgba(56, 223, 248, 0.5), 0 0 30px rgba(124, 58, 237, 0.3), 0 15px 40px rgba(0,0,0,0.6); }
+    50% { box-shadow: 0 0 70px rgba(56, 223, 248, 0.8), 0 0 50px rgba(124, 58, 237, 0.5), 0 15px 40px rgba(0,0,0,0.6); }
+    100% { box-shadow: 0 0 40px rgba(56, 223, 248, 0.5), 0 0 30px rgba(124, 58, 237, 0.3), 0 15px 40px rgba(0,0,0,0.6); }
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(20,25,50,0.95);
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px solid #38bdf8;
+    position: relative;
+    animation: glowPulse 3s ease-in-out infinite;
+    box-sizing: border-box;
+}
+
+/* SUPPRIMER TOUT GLOW SUR LE TEXTE */
+* {
+    text-shadow: none !important;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #38bdf8;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #38bdf8;
+    margin: 0;
+}
+
+header p {
+    margin-top: 5px;
+    color: #80ffdb;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    margin-top: 40px;
+}
+
+h2 {
+    border-left: 6px solid #38bdf8;
+    padding-left: 12px;
+    font-size: 1.8em;
+    color: #38bdf8;
+}
+
+p, li {
+    line-height: 1.6;
+    color: #cbd5f5;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+/* PROJECTS */
+.project {
+    background-color: rgba(30, 40, 80, 0.95);
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border-left: 6px solid #38bdf8;
+    box-shadow: none;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #80ffdb;
+}
+
+/* BUTTON CV WITH GLOW */
+@keyframes glowPulseBtn {
+    0% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #7c3aed; }
+    50% { box-shadow: 0 0 20px #38bdf8, 0 0 40px #7c3aed; }
+    100% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #7c3aed; }
+}
+
+.btn-cv {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #38bdf8, #7c3aed);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    animation: glowPulseBtn 2s ease-in-out infinite;
+}
+
+.btn-cv:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 30px #38bdf8, 0 0 60px #7c3aed;
+}
+
+/* CONTACT LINKS */
+.contact a {
+    color: #80ffdb;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 15px;
+    border-top: 1px solid #38bdf8;
+    color: #94a3b8;
+    font-size: 0.9em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
     .container {
-        width: 100%;
-        max-width: 900px;
-        background: rgba(20, 25, 50, 0.95);
-        padding: 50px;
-        border-radius: 25px;
-        border: 1px solid #38bdf8;
-        box-shadow: 
-            0 0 60px rgba(56, 223, 248, 0.6),   /* glow bleu */
-            0 0 40px rgba(124, 58, 237, 0.4),   /* glow violet */
-            0 15px 40px rgba(0,0,0,0.6);        /* ombre classique */
-        position: relative;
-        z-index: 1;
-    }
-
-    header {
-        text-align: center;
-        padding-bottom: 30px;
-        border-bottom: 2px solid #38bdf8;
+        padding: 30px;
     }
 
     header h1 {
-        font-size: 3em;
-        color: #38bdf8;
-        margin: 0;
-    }
-
-    header p {
-        margin-top: 5px;
-        color: #80ffdb;
-        font-weight: bold;
-    }
-
-    section {
-        margin-top: 40px;
+        font-size: 2.2em;
     }
 
     h2 {
-        border-left: 6px solid #38bdf8;
-        padding-left: 12px;
-        font-size: 1.8em;
-        color: #38bdf8;
+        font-size: 1.5em;
     }
-
-    p, li {
-        line-height: 1.6;
-        color: #cbd5f5;
-    }
-
-    ul {
-        margin-left: 20px;
-    }
-
-    .project {
-        background-color: rgba(30, 40, 80, 0.95);
-        padding: 25px;
-        margin-top: 20px;
-        border-radius: 15px;
-        border-left: 6px solid #38bdf8;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    .project h3 {
-        margin-top: 0;
-        color: #80ffdb;
-    }
-
-    /* BOUTON CV SOBRE */
-    .btn-cv {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 15px 40px;
-        font-weight: bold;
-        font-size: 1.1em;
-        text-decoration: none;
-        color: #ffffff;
-        background: linear-gradient(135deg, #38bdf8, #7c3aed);
-        border-radius: 15px;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-
-    .btn-cv:hover {
-        transform: translateY(-2px) scale(1.03);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    }
-
-    .contact a {
-        color: #80ffdb;
-        text-decoration: none;
-        margin-right: 20px;
-        font-weight: bold;
-    }
-
-    .contact a:hover {
-        text-decoration: underline;
-    }
-
-    footer {
-        text-align: center;
-        margin-top: 50px;
-        padding-top: 15px;
-        border-top: 1px solid #38bdf8;
-        color: #94a3b8;
-        font-size: 0.9em;
-    }
-
-    @media (max-width: 768px) {
-        .container {
-            padding: 30px;
-        }
-
-        header h1 {
-            font-size: 2.2em;
-        }
-
-        h2 {
-            font-size: 1.5em;
-        }
-    }
+}
 </style>
 </head>
 
@@ -165,42 +185,42 @@
 <section>
     <h2>Technical Skills</h2>
     <ul>
-        <li>Information Gathering : recon-ng , theHarvester , SpiderFoot</li>
-        <li>Vulnerability Identification : Nmap (port scanning , service enumeration , vulnerability detection)</li>
+        <li>Information Gathering: recon-ng, theHarvester, SpiderFoot</li>
+        <li>Vulnerability Identification: Nmap (port scanning, service enumeration, vulnerability detection)</li>
         <li>Vulnerability Analysis</li>
-        <li>Vulnerability Exploitation : Metasploit Framework , Exploit Database</li>
-        <li>Post-Exploitation & Maintaining Access : Mimikatz , Backdoors , Persistence Techniques</li>
-        <li>Digital Forensics Tools : FTKimager , Autopsy</li>
+        <li>Vulnerability Exploitation: Metasploit Framework, Exploit Database</li>
+        <li>Post-Exploitation & Maintaining Access: Mimikatz, Backdoors, Persistence Techniques</li>
+        <li>Digital Forensics Tools: FTK Imager, Autopsy</li>
     </ul>
 </section>
 
 <section>
     <h2>Projects</h2>
     <div class="project">
-        <h3>Company : Casablanca Finance City (CFC)</h3>
+        <h3>Company: Casablanca Finance City (CFC)</h3>
         <p><strong>Scope:</strong> Web & Network Pentesting</p>
-        <p><strong>Tools:</strong> Recon-ng , TheHarveter , Spiderfoot , Nmap , Zaproxy , Metasploit</p>
+        <p><strong>Tools:</strong> Recon-ng, theHarvester, SpiderFoot, Nmap, Zaproxy, Metasploit</p>
         <p><strong>Outcome:</strong> Vulnerabilities identified & documented.</p>
     </div>
 
     <div class="project">
-        <h3>Company : Régie 3</h3>
+        <h3>Company: Régie 3</h3>
         <p><strong>Scope:</strong> Web & Network Pentesting</p>
-        <p><strong>Tools:</strong> Recon-ng , TheHarveter , Spiderfoot , Nmap , Zaproxy , Metasploit</p>
+        <p><strong>Tools:</strong> Recon-ng, theHarvester, SpiderFoot, Nmap, Zaproxy, Metasploit</p>
         <p><strong>Outcome:</strong> Vulnerabilities identified & documented.</p>
     </div>
 
     <div class="project">
-        <h3>Company : ISGA</h3>
+        <h3>Company: ISGA</h3>
         <p><strong>Scope:</strong> Penetration Testing on Web, Network, and Three Internal Platforms</p>
-        <p><strong>Tools:</strong> Recon-ng , TheHarveter , Spiderfoot , Nmap , Nikto , Zaproxy , Metasploit</p>
+        <p><strong>Tools:</strong> Recon-ng, theHarvester, SpiderFoot, Nmap, Nikto, Zaproxy, Metasploit</p>
         <p><strong>Outcome:</strong> Vulnerabilities identified & documented.</p>
     </div>
 
     <div class="project">
-        <h3>Company : RMO</h3>
+        <h3>Company: RMO</h3>
         <p><strong>Scope:</strong> Conducted a security audit following a ransomware incident</p>
-        <p><strong>Tools:</strong> FTKimager , Autopsy , Nmap</p>
+        <p><strong>Tools:</strong> FTK Imager, Autopsy, Nmap</p>
         <p><strong>Outcome:</strong> Attack vector and ransomware source successfully identified.</p>
     </div>
 </section>
@@ -209,7 +229,7 @@
     <h2>Contact</h2>
     <p>Email: <a href="mailto:mounaelbahloul@gmail.com">mounaelbahloul@gmail.com</a></p>
     <a href="https://github.com/MoUnA19B" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/mouna-elbahloul-1b9976202/" target="_blank">LinkedIn</a>
+    <a href="https://linkedin.com/in/tonprofil" target="_blank">LinkedIn</a>
     <br>
     <a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">
         Download CV
