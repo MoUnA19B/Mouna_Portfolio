@@ -6,19 +6,41 @@
 <title>Mouna Elbahloul | Pentesting Portfolio</title>
 
 <style>
-    /* FONT + BODY */
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+    /* BODY + ANIMATED BACKGROUND */
     body {
         font-family: 'Roboto', sans-serif;
         margin: 0;
         min-height: 100vh;
-        background: linear-gradient(135deg, #0b132b, #1c1f4b, #3a0ca3);
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 20px;
         color: #e0e0e0;
+        overflow: hidden;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, #0b132b, #1c1f4b, #3a0ca3, #38bdf8, #7c3aed);
+        background-size: 400% 400%;
+        animation: animateBG 20s linear infinite;
+        z-index: -1;
+        filter: blur(60px);
+        opacity: 0.6;
+    }
+
+    @keyframes animateBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
     /* CONTAINER */
@@ -30,6 +52,8 @@
         border-radius: 25px;
         box-shadow: 0 15px 40px rgba(0,0,0,0.6);
         border: 1px solid #38bdf8;
+        position: relative;
+        z-index: 1;
     }
 
     header {
@@ -73,7 +97,6 @@
         margin-left: 20px;
     }
 
-    /* PROJECT BOX */
     .project {
         background-color: rgba(30, 40, 80, 0.95);
         padding: 25px;
@@ -89,16 +112,6 @@
         text-shadow: 0 0 4px #80ffdb;
     }
 
-    .methodology {
-        background-color: rgba(30, 40, 80, 0.95);
-        padding: 25px;
-        margin-top: 20px;
-        border-left: 6px solid #7c3aed;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    /* BUTTON CV SOBRE */
     .btn-cv {
         display: inline-block;
         margin-top: 30px;
