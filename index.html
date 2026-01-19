@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mouna ELBAHLOUL | Pentesting Portfolio</title>
+<title>Mouna Elbahloul | Pentesting Portfolio</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
@@ -15,8 +15,8 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start; /* container un peu plus bas */
+    padding: 40px 20px 60px 20px;
     background: #0b132b;
     color: #e0e0e0;
     overflow-x: hidden;
@@ -39,7 +39,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px; /* plus large */
     background: rgba(20,25,50,0.95);
     padding: 50px;
     border-radius: 25px;
@@ -121,9 +121,9 @@ p, li {
 
 /* ===== BUTTON ===== */
 @keyframes glowPulseBtn {
-    0% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #7c3aed; }
-    50% { box-shadow: 0 0 20px #38bdf8, 0 0 40px #7c3aed; }
-    100% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #7c3aed; }
+    0% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8; }
+    50% { box-shadow: 0 0 20px #38bdf8, 0 0 40px #38bdf8; }
+    100% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8; }
 }
 
 .btn-cv {
@@ -132,7 +132,7 @@ p, li {
     padding: 15px 40px;
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(135deg, #38bdf8, #7c3aed);
+    background: linear-gradient(135deg, #38bdf8, #1e40af);
     border-radius: 15px;
     text-decoration: none;
     animation: glowPulseBtn 2s infinite;
@@ -150,6 +150,12 @@ footer {
     padding-top: 15px;
     color: #94a3b8;
 }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container { padding: 30px; }
+    header h1 { font-size: 2.2em; }
+}
 </style>
 </head>
 
@@ -160,14 +166,22 @@ footer {
 <div class="container">
 
 <header>
-    <h1>Mouna ELBAHLOUL</h1>
+    <h1>Mouna Elbahloul</h1>
 
-    <!-- TERMINAL (icone supprimée) -->
+    <!-- TERMINAL -->
     <div class="terminal">
         <span class="prompt">root@pentest:~$</span>
         <span id="terminal-text"></span><span class="cursor"></span>
     </div>
 </header>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        Cybersecurity specialist focused on penetration testing.
+        Conduct authorized assessments to identify vulnerabilities and provide remediation.
+    </p>
+</section>
 
 <section>
     <h2>Technical Skills</h2>
@@ -184,27 +198,28 @@ footer {
     <h2>Projects</h2>
 
     <div class="project">
-        <h3>Client : Casablanca Finance City (CFC)</h3>
+        <h3>Client: Casablanca Finance City (CFC)</h3>
         <p>Scope: Web & Network Pentesting</p>
         <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, Zaproxy, Metasploit</p>
         <p>Outcome: Vulnerabilities identified & documented</p>
     </div>
 
     <div class="project">
-        <h3>Client : Régie 3</h3>
+        <h3>Client: Régie 3</h3>
         <p>Scope: Web & Network Pentesting</p>
         <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, Zaproxy, Metasploit</p>
         <p>Outcome: Vulnerabilities identified & documented</p>
     </div>
 
     <div class="project">
-        <h3>Client : Web, Network & Internal Platforms</p>
+        <h3>Client: ISGA</h3>
+        <p>Scope: Web, Network & Internal Platforms</p>
         <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, Nikto, Zaproxy, Metasploit</p>
         <p>Outcome: Vulnerabilities identified & documented</p>
     </div>
 
     <div class="project">
-        <h3>Client : RMO</h3>
+        <h3>Client: RMO</h3>
         <p>Scope: Ransomware forensic investigation</p>
         <p>Tools: FTK Imager, Autopsy, Nmap</p>
         <p>Outcome: Attack vector identified</p>
@@ -214,7 +229,7 @@ footer {
 <a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">Download CV</a>
 
 <footer>
-© 2026 Mouna ELBAHLOUL · Pentesting Portfolio
+© 2026 Mouna Elbahloul · Pentesting Portfolio
 </footer>
 
 </div>
