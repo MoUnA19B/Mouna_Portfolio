@@ -3,86 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mouna Elbahloul | Pentesting Portfolio</title>
+<title>Mouna Elbahloul | Red Team Portfolio</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* ===== BODY ===== */
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background: #0b132b;
-    color: #e0e0e0;
+    font-family: monospace;
+    background: #020617;
+    color: #e5e7eb;
     overflow-x: hidden;
 }
 
 /* ===== MATRIX BACKGROUND ===== */
-#matrix-bg {
+#matrix {
     position: fixed;
     inset: 0;
-    z-index: -2;
-    background: #0b132b;
+    z-index: -1;
 }
 
-/* ===== CONTAINER GLOW ===== */
-@keyframes glowPulse {
-    0% { box-shadow: 0 0 40px rgba(56,223,248,0.5), 0 0 30px rgba(124,58,237,0.3); }
-    50% { box-shadow: 0 0 70px rgba(56,223,248,0.8), 0 0 50px rgba(124,58,237,0.5); }
-    100% { box-shadow: 0 0 40px rgba(56,223,248,0.5), 0 0 30px rgba(124,58,237,0.3); }
-}
-
+/* ===== MAIN CONTAINER ===== */
 .container {
-    width: 100%;
-    max-width: 900px;
-    background: rgba(20,25,50,0.95);
+    max-width: 950px;
+    margin: 60px auto;
+    background: rgba(2, 6, 23, 0.94);
     padding: 50px;
-    border-radius: 25px;
-    border: 1px solid #38bdf8;
-    animation: glowPulse 3s ease-in-out infinite;
-    position: relative;
-    z-index: 1;
+    border-radius: 20px;
+    border: 1px solid #22c55e;
+    box-shadow: 0 0 60px rgba(34, 197, 94, 0.35);
 }
 
 /* ===== HEADER ===== */
 header {
     text-align: center;
+    border-bottom: 1px solid #22c55e;
     padding-bottom: 30px;
-    border-bottom: 2px solid #38bdf8;
 }
 
 header h1 {
-    font-size: 3em;
-    color: #38bdf8;
     margin: 0;
+    font-size: 3em;
+    color: #22c55e;
 }
 
-/* ===== FAKE TERMINAL ===== */
+/* ===== TERMINAL ===== */
 .terminal {
-    margin-top: 15px;
-    background: #020617;
+    margin-top: 20px;
+    background: #000;
+    padding: 15px 20px;
     border-radius: 10px;
-    padding: 15px;
-    font-family: monospace;
-    color: #22c55e;
     text-align: left;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.9);
 }
 
 .prompt {
     color: #38bdf8;
 }
 
+.cmd {
+    color: #22c55e;
+}
+
 .cursor {
     display: inline-block;
-    width: 8px;
-    height: 16px;
-    background: #22c55e;
     margin-left: 5px;
     animation: blink 1s infinite;
 }
@@ -92,80 +76,91 @@ header h1 {
 }
 
 /* ===== SECTIONS ===== */
-section { margin-top: 40px; }
+section {
+    margin-top: 45px;
+}
 
 h2 {
-    border-left: 6px solid #38bdf8;
+    color: #22c55e;
+    border-left: 4px solid #22c55e;
     padding-left: 12px;
-    font-size: 1.8em;
-    color: #38bdf8;
+    font-size: 1.6em;
 }
 
 p, li {
     line-height: 1.6;
-    color: #cbd5f5;
+    color: #cbd5e1;
+}
+
+ul {
+    margin-left: 20px;
 }
 
 /* ===== PROJECTS ===== */
 .project {
-    background: rgba(30,40,80,0.95);
-    padding: 25px;
+    background: #020617;
+    padding: 20px;
     margin-top: 20px;
-    border-radius: 15px;
-    border-left: 6px solid #38bdf8;
+    border-left: 4px solid #22c55e;
+    border-radius: 8px;
 }
 
 .project h3 {
-    color: #80ffdb;
+    margin-top: 0;
+    color: #38bdf8;
 }
 
-/* ===== BUTTON ===== */
-@keyframes glowPulseBtn {
-    0% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #7c3aed; }
-    50% { box-shadow: 0 0 20px #38bdf8, 0 0 40px #7c3aed; }
-    100% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #7c3aed; }
+/* ===== CONTACT / BUTTON ===== */
+.contact a {
+    color: #38bdf8;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
 
 .btn-cv {
     display: inline-block;
     margin-top: 30px;
-    padding: 15px 40px;
+    padding: 14px 35px;
     font-weight: bold;
-    color: #fff;
-    background: linear-gradient(135deg, #38bdf8, #7c3aed);
-    border-radius: 15px;
+    color: #020617;
+    background: #22c55e;
+    border-radius: 10px;
     text-decoration: none;
-    animation: glowPulseBtn 2s infinite;
+    transition: 0.3s ease;
 }
 
 .btn-cv:hover {
+    background: #16a34a;
     transform: scale(1.05);
 }
 
 /* ===== FOOTER ===== */
 footer {
-    margin-top: 50px;
+    margin-top: 60px;
     text-align: center;
-    border-top: 1px solid #38bdf8;
-    padding-top: 15px;
-    color: #94a3b8;
+    font-size: 0.9em;
+    color: #64748b;
 }
 </style>
 </head>
 
 <body>
 
-<canvas id="matrix-bg"></canvas>
+<canvas id="matrix"></canvas>
 
 <div class="container">
 
 <header>
     <h1>Mouna Elbahloul</h1>
 
-    <!-- TERMINAL -->
     <div class="terminal">
         👨‍💻 <span class="prompt">root@pentest:~$</span>
-        <span id="terminal-text"></span><span class="cursor"></span>
+        <span class="cmd" id="terminal-text"></span>
+        <span class="cursor">█</span>
     </div>
 </header>
 
@@ -208,14 +203,20 @@ footer {
         <h3>Company : RMO</h3>
         <p>Scope: Ransomware forensic investigation</p>
         <p>Tools: FTK Imager, Autopsy, Nmap</p>
-        <p>Outcome: Attack vector identified</p>
+        <p>Outcome: Attack vector and ransomware source identified</p>
     </div>
 </section>
 
-<a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">Download CV</a>
+<section class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mounaelbahloul@gmail.com">mounaelbahloul@gmail.com</a></p>
+    <a href="https://github.com/MoUnA19B" target="_blank">GitHub</a>
+    <a href="#" target="_blank">LinkedIn</a><br>
+    <a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">Download CV</a>
+</section>
 
 <footer>
-© 2026 Mouna Elbahloul · Pentesting Portfolio
+© 2026 Mouna Elbahloul · Red Team Portfolio
 </footer>
 
 </div>
@@ -224,20 +225,17 @@ footer {
 /* ===== TERMINAL TYPING ===== */
 const text = "Pentester | Cybersecurity Specialist";
 let i = 0;
-const speed = 60;
-const target = document.getElementById("terminal-text");
-
 function typeTerminal() {
     if (i < text.length) {
-        target.textContent += text.charAt(i);
+        document.getElementById("terminal-text").textContent += text.charAt(i);
         i++;
-        setTimeout(typeTerminal, speed);
+        setTimeout(typeTerminal, 60);
     }
 }
 typeTerminal();
 
-/* ===== MATRIX BACKGROUND ===== */
-const canvas = document.getElementById("matrix-bg");
+/* ===== MATRIX EFFECT ===== */
+const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -248,19 +246,25 @@ const columns = Math.floor(canvas.width / fontSize);
 const drops = Array(columns).fill(1);
 
 function drawMatrix() {
-    ctx.fillStyle = "rgba(11,19,43,0.15)";
+    ctx.fillStyle = "rgba(2,6,23,0.1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#38bdf8";
+    ctx.fillStyle = "#22c55e";
     ctx.font = fontSize + "px monospace";
 
     for (let i = 0; i < drops.length; i++) {
         const char = chars[Math.floor(Math.random() * chars.length)];
         ctx.fillText(char, i * fontSize, drops[i] * fontSize);
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.97) drops[i] = 0;
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
         drops[i]++;
     }
 }
+
 setInterval(drawMatrix, 50);
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
 </script>
 
 </body>
