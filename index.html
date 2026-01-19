@@ -15,8 +15,8 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* container un peu plus bas */
-    padding: 40px 20px 60px 20px;
+    align-items: flex-start;
+    padding: 90px 20px 60px 20px; /* ⬅️ plus bas */
     background: #0b132b;
     color: #e0e0e0;
     overflow-x: hidden;
@@ -32,17 +32,17 @@ body {
 
 /* ===== CONTAINER GLOW ===== */
 @keyframes glowPulse {
-    0% { box-shadow: 0 0 40px rgba(56,223,248,0.5), 0 0 30px rgba(124,58,237,0.3); }
-    50% { box-shadow: 0 0 70px rgba(56,223,248,0.8), 0 0 50px rgba(124,58,237,0.5); }
-    100% { box-shadow: 0 0 40px rgba(56,223,248,0.5), 0 0 30px rgba(124,58,237,0.3); }
+    0% { box-shadow: 0 0 35px rgba(56,189,248,0.4); }
+    50% { box-shadow: 0 0 65px rgba(56,189,248,0.8); }
+    100% { box-shadow: 0 0 35px rgba(56,189,248,0.4); }
 }
 
 .container {
     width: 100%;
-    max-width: 1000px; /* plus large */
+    max-width: 860px; /* ⬅️ un peu moins large */
     background: rgba(20,25,50,0.95);
     padding: 50px;
-    border-radius: 25px;
+    border-radius: 22px;
     border: 1px solid #38bdf8;
     animation: glowPulse 3s ease-in-out infinite;
     position: relative;
@@ -62,14 +62,14 @@ header h1 {
     margin: 0;
 }
 
-/* ===== FAKE TERMINAL ===== */
+/* ===== TERMINAL ===== */
 .terminal {
     margin-top: 15px;
     background: #020617;
     border-radius: 10px;
     padding: 15px;
     font-family: monospace;
-    color: #22c55e;
+    color: #e5e7eb;
     text-align: left;
     box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
 }
@@ -80,9 +80,9 @@ header h1 {
 
 .cursor {
     display: inline-block;
-    width: 8px;
+    width: 9px;
     height: 16px;
-    background: #22c55e;
+    background: #38bdf8;
     margin-left: 5px;
     animation: blink 1s infinite;
 }
@@ -109,31 +109,31 @@ p, li {
 /* ===== PROJECTS ===== */
 .project {
     background: rgba(30,40,80,0.95);
-    padding: 25px;
+    padding: 22px;
     margin-top: 20px;
-    border-radius: 15px;
+    border-radius: 14px;
     border-left: 6px solid #38bdf8;
 }
 
 .project h3 {
-    color: #80ffdb;
+    color: #93c5fd;
 }
 
 /* ===== BUTTON ===== */
 @keyframes glowPulseBtn {
-    0% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8; }
-    50% { box-shadow: 0 0 20px #38bdf8, 0 0 40px #38bdf8; }
-    100% { box-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8; }
+    0% { box-shadow: 0 0 10px #38bdf8; }
+    50% { box-shadow: 0 0 25px #38bdf8; }
+    100% { box-shadow: 0 0 10px #38bdf8; }
 }
 
 .btn-cv {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 35px;
     padding: 15px 40px;
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(135deg, #38bdf8, #1e40af);
-    border-radius: 15px;
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    border-radius: 14px;
     text-decoration: none;
     animation: glowPulseBtn 2s infinite;
 }
@@ -150,12 +150,6 @@ footer {
     padding-top: 15px;
     color: #94a3b8;
 }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .container { padding: 30px; }
-    header h1 { font-size: 2.2em; }
-}
 </style>
 </head>
 
@@ -168,7 +162,6 @@ footer {
 <header>
     <h1>Mouna Elbahloul</h1>
 
-    <!-- TERMINAL -->
     <div class="terminal">
         <span class="prompt">root@pentest:~$</span>
         <span id="terminal-text"></span><span class="cursor"></span>
@@ -178,8 +171,8 @@ footer {
 <section>
     <h2>About Me</h2>
     <p>
-        Cybersecurity specialist focused on penetration testing.
-        Conduct authorized assessments to identify vulnerabilities and provide remediation.
+        Cybersecurity specialist focused on penetration testing and offensive security.
+        Experienced in identifying vulnerabilities, assessing risks, and delivering clear remediation reports.
     </p>
 </section>
 
@@ -200,21 +193,21 @@ footer {
     <div class="project">
         <h3>Client: Casablanca Finance City (CFC)</h3>
         <p>Scope: Web & Network Pentesting</p>
-        <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, Zaproxy, Metasploit</p>
+        <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, ZAP, Metasploit</p>
         <p>Outcome: Vulnerabilities identified & documented</p>
     </div>
 
     <div class="project">
         <h3>Client: Régie 3</h3>
         <p>Scope: Web & Network Pentesting</p>
-        <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, Zaproxy, Metasploit</p>
+        <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, ZAP, Metasploit</p>
         <p>Outcome: Vulnerabilities identified & documented</p>
     </div>
 
     <div class="project">
         <h3>Client: ISGA</h3>
         <p>Scope: Web, Network & Internal Platforms</p>
-        <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, Nikto, Zaproxy, Metasploit</p>
+        <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, Nikto, ZAP, Metasploit</p>
         <p>Outcome: Vulnerabilities identified & documented</p>
     </div>
 
@@ -222,7 +215,7 @@ footer {
         <h3>Client: RMO</h3>
         <p>Scope: Ransomware forensic investigation</p>
         <p>Tools: FTK Imager, Autopsy, Nmap</p>
-        <p>Outcome: Attack vector identified</p>
+        <p>Outcome: Attack vector and ransomware source identified</p>
     </div>
 </section>
 
@@ -238,7 +231,7 @@ footer {
 /* ===== TERMINAL TYPING ===== */
 const text = "Pentester | Cybersecurity Specialist";
 let i = 0;
-const speed = 60;
+const speed = 70;
 const target = document.getElementById("terminal-text");
 
 function typeTerminal() {
