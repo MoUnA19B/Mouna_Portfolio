@@ -20,43 +20,6 @@ body {
     background: #0b132b;
     color: #e0e0e0;
     overflow-x: hidden;
-    transition: background 0.4s, color 0.4s;
-}
-
-/* ===== LIGHT MODE ===== */
-body.light-mode {
-    background: #f1f5f9;
-    color: #0f172a;
-}
-
-body.light-mode #matrix-bg {
-    background: #f1f5f9;
-}
-
-body.light-mode .container {
-    background: #ffffff;
-    border-color: #2563eb;
-    animation: none;
-}
-
-body.light-mode h1,
-body.light-mode h2 {
-    color: #2563eb;
-}
-
-body.light-mode p,
-body.light-mode li {
-    color: #1e293b;
-}
-
-body.light-mode .terminal,
-body.light-mode .contact-terminal {
-    background: #e5e7eb;
-    color: #0f172a;
-}
-
-body.light-mode .prompt {
-    color: #2563eb;
 }
 
 /* ===== MATRIX BACKGROUND ===== */
@@ -86,30 +49,6 @@ body.light-mode .prompt {
     z-index: 1;
 }
 
-/* ===== TOP BUTTONS ===== */
-.top-controls {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    display: flex;
-    gap: 12px;
-}
-
-.control-btn {
-    cursor: pointer;
-    padding: 8px 14px;
-    border-radius: 10px;
-    border: 1px solid #38bdf8;
-    background: transparent;
-    color: #38bdf8;
-    font-weight: bold;
-}
-
-.control-btn:hover {
-    background: #38bdf8;
-    color: #020617;
-}
-
 /* ===== HEADER ===== */
 header {
     text-align: center;
@@ -132,6 +71,7 @@ header h1 {
     font-family: monospace;
     color: #e5e7eb;
     text-align: left;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
 }
 
 .prompt { color: #38bdf8; }
@@ -171,6 +111,8 @@ p, li {
     border-left: 6px solid #38bdf8;
 }
 
+.project h3 { color: #93c5fd; }
+
 /* ===== CERTIFICATIONS ===== */
 .cert {
     background: rgba(15,25,60,0.95);
@@ -178,17 +120,44 @@ p, li {
     margin-top: 15px;
     border-radius: 12px;
     border-left: 5px solid #60a5fa;
+    font-family: monospace;
 }
 
-/* ===== CONTACT ===== */
+.cert a {
+    color: #e5e7eb;
+    text-decoration: none;
+    display: block;
+}
+
+.cert a:hover {
+    color: #38bdf8;
+    text-decoration: underline;
+}
+
+/* ===== CONTACT TERMINAL ===== */
 .contact-terminal {
     background: #020617;
     border-radius: 10px;
     padding: 20px;
     font-family: monospace;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
 }
 
-/* ===== BUTTON CV ===== */
+.contact-terminal a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-terminal a:hover { text-decoration: underline; }
+
+/* ===== BUTTON ===== */
+@keyframes glowPulseBtn {
+    0% { box-shadow: 0 0 10px #38bdf8; }
+    50% { box-shadow: 0 0 25px #38bdf8; }
+    100% { box-shadow: 0 0 10px #38bdf8; }
+}
+
 .btn-cv {
     display: inline-block;
     margin-top: 40px;
@@ -198,6 +167,7 @@ p, li {
     background: linear-gradient(135deg, #38bdf8, #2563eb);
     border-radius: 14px;
     text-decoration: none;
+    animation: glowPulseBtn 2s infinite;
 }
 
 /* ===== FOOTER ===== */
@@ -206,6 +176,7 @@ footer {
     text-align: center;
     border-top: 1px solid #38bdf8;
     padding-top: 15px;
+    color: #94a3b8;
 }
 </style>
 </head>
@@ -216,37 +187,119 @@ footer {
 
 <div class="container">
 
-    <!-- CONTROLS -->
-    <div class="top-controls">
-        <button class="control-btn" onclick="toggleLanguage()">FR / EN</button>
-        <button class="control-btn" onclick="toggleTheme()">🌙</button>
+<header>
+    <h1>Mouna ELBAHLOUL</h1>
+    <div class="terminal">
+        <span class="prompt">root@pentest:~$</span>
+        <span id="terminal-text"></span><span class="cursor"></span>
+    </div>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        Cybersecurity specialist focused on penetration testing and offensive security.
+        Experienced in identifying vulnerabilities, assessing risks, and delivering clear remediation reports.
+    </p>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <ul>
+        <li><strong>Information Gathering:</strong>recon-ng, theHarvester, SpiderFoot</li>
+        <li><strong>Vulnerability Identification:</strong> Nmap (port scanning, service enumeration, vulnerability detection)</li>
+        <li><strong>Vulnerability Analysis</strong></li>
+        <li><strong>Vulnerability Exploitation:</strong> Metasploit Framework, Exploit Database</li>
+        <li><strong>Post-Exploitation & Maintaining Access:</strong> Mimikatz, Backdoors, Persistence Techniques</li>
+        <li><strong>Digital Forensics Tools:</strong> FTK Imager, Autopsy</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Certifications</h2>
+
+    <div class="cert">
+        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-C6DNAE0O4A.pdf" target="_blank">
+            TryHackMe – Junior Penetration Tester
+        </a>
     </div>
 
-    <!-- TOUT TON CONTENU RESTE IDENTIQUE -->
-    <!-- (je n’ai rien changé ici) -->
+    <div class="cert">
+        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-H9IM3VFJPY.pdf" target="_blank">
+            TryHackMe – CompTIA Pentest+
+        </a>
+    </div>
+</section>
 
-    <!-- ... -->
+<section>
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Client: Casablanca Finance City (CFC)</h3>
+        <p>Scope: Web & Network Pentesting</p>
+        <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, ZAP, Metasploit</p>
+        <p>Outcome: Vulnerabilities identified & documented</p>
+    </div>
+
+    <div class="project">
+        <h3>Client: Régie 3</h3>
+        <p>Scope: Web & Network Pentesting</p>
+        <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, ZAP, Metasploit</p>
+        <p>Outcome: Vulnerabilities identified & documented</p>
+    </div>
+
+    <div class="project">
+        <h3>Client: ISGA</h3>
+        <p>Scope: Web, Network & Internal Platforms</p>
+        <p>Tools: Recon-ng, theHarvester, SpiderFoot, Nmap, Nikto, ZAP, Metasploit</p>
+        <p>Outcome: Vulnerabilities identified & documented</p>
+    </div>
+
+    <div class="project">
+        <h3>Client: RMO</h3>
+        <p>Scope: Ransomware forensic investigation</p>
+        <p>Tools: FTK Imager, Autopsy, Nmap</p>
+        <p>Outcome: Attack vector and ransomware source identified</p>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <div class="contact-terminal">
+        <span class="prompt">root@pentest:~$</span><br><br>
+        Email: <a href="mailto:mounaelbahloul@gmail.com">mounaelbahloul@gmail.com</a><br><br>
+
+        <a href="https://github.com/MoUnA19B" target="_blank">GitHub</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/mouna-elbahloul-1b9976202/" target="_blank">LinkedIn</a>
+        &nbsp;|&nbsp;
+        <a href="https://tryhackme.com/p/mouna28" target="_blank">TryHackMe</a>
+    </div>
+</section>
+
+<a class="btn-cv" href="CV_Mouna_Elbahloul.pdf" target="_blank">Download resume</a>
+
+<footer>
+© 2026 Mouna ELBAHLOUL · Pentesting Portfolio
+</footer>
+
 </div>
 
 <script>
-/* ===== TERMINAL TEXT ===== */
 const text = "Pentester | Cybersecurity Specialist";
 let i = 0;
 const target = document.getElementById("terminal-text");
 
-/* ===== THEME ===== */
-function toggleTheme() {
-    document.body.classList.toggle("light-mode");
+function typeTerminal() {
+    if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeTerminal, 70);
+    }
 }
+typeTerminal();
 
-/* ===== LANGUAGE (structure prête) ===== */
-let currentLang = "en";
-function toggleLanguage() {
-    currentLang = currentLang === "en" ? "fr" : "en";
-    alert("Langue changée : " + currentLang.toUpperCase());
-}
-
-/* ===== MATRIX ===== */
+/* MATRIX */
 const canvas = document.getElementById("matrix-bg");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
